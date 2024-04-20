@@ -85,8 +85,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'djongo',
         'NAME': 'your-Data',
-        'HOST': '127.0.0.1',
-        'PORT': '27017',
+        'CLIENT':{
+            'host':'mongodb+srv://alexandrucarciumaru03:beyqsLvouvk3A3IG@database.ac3uoad.mongodb.net/'
+        }
     }
 }
 # Password validation
