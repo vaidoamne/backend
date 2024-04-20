@@ -1,20 +1,37 @@
 from django.db import models
 
-
 class Flight(models.Model):
-        id = models.CharField(max_length=100)
-        flight_number = models.CharField(max_length=20,primary_key=True)  # Assuming flight numbers can include characters
-        timestamp = models.DateTimeField()
-        destination = models.CharField(max_length=200)
-        altitude = models.IntegerField()
-        airspeed = models.IntegerField()
-        temperature = models.IntegerField()
-        pressure = models.IntegerField()
-        passengers = models.IntegerField()
-        capacity = models.IntegerField()
-        
-
-        class Meta:
-                managed = False
-                db_table = 'backendapp_flight'
-        
+    id = models.CharField(max_length=24)
+    flight_number = models.CharField(max_length=20, primary_key=True)
+    timestamp = models.DateTimeField()
+    destination = models.CharField(max_length=200)
+    altitude = models.IntegerField()
+    airspeed = models.IntegerField()
+    temperature = models.IntegerField()
+    pressure = models.IntegerField()
+    passengers = models.IntegerField()
+    capacity = models.IntegerField()
+    company_name = models.CharField(max_length=100)
+    plane_name = models.CharField(max_length=100)
+    plane_model = models.CharField(max_length=100)
+    plane_age = models.IntegerField()
+    current_occupied_spaces = models.IntegerField()
+    speed = models.IntegerField()
+    startX = models.FloatField()
+    startY = models.FloatField()
+    currentX = models.FloatField()
+    currentY = models.FloatField()
+    endX = models.FloatField()
+    endY = models.FloatField()
+    starting_airport_name = models.CharField(max_length=200)
+    starting_airport_X = models.FloatField()
+    starting_airport_Y = models.FloatField()
+    end_airport_name = models.CharField(max_length=200)
+    end_airport_X = models.FloatField()
+    end_airport_Y = models.FloatField()
+    departure_time = models.DateTimeField()
+    estimated_arrival_time = models.DateTimeField()
+    arrival_time = models.DateTimeField()
+    class Meta:
+        managed = False
+        db_table = 'backendapp_flight'
