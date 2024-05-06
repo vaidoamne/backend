@@ -5,4 +5,4 @@ class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = UserProfile
         fields = ['email', 'phone_number', 'first_name', 'last_name', 'password', 'level']
-        db_table = "users" 
+        db_table = "userprofiles" 

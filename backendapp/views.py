@@ -1,4 +1,6 @@
 # views.py
+
+
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from .models import Flight
@@ -18,4 +20,4 @@ def get_all_flights(request):
     serializer = FlightSerializer(flights, many=True)
         
     print("stage 3")
-    return Response(serializer.data)
+    return Response(serializer.data)    

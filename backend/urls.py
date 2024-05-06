@@ -15,7 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from backendapp.views import get_all_flights
-from login.views import login,signup
+from login.views import login,signup,get_all_users,remove_user,promote_user,demote_user
+from airports.views import get_all_airports,get_overcrowded_airports
 from django.urls import path
 
 urlpatterns = [
@@ -23,4 +24,10 @@ urlpatterns = [
     path('flights', get_all_flights),
     path('login', login),
     path('signup', signup),
+    path('remove_user/', remove_user, name='remove_user'),
+    path('promote_user/', promote_user, name='promote_user'),
+    path('demote_user/', demote_user, name='demote_user'),
+    path('get_all_airports', get_all_airports, name='get_all_airports'),
+    path('get_overcrowded_airports', get_overcrowded_airports, name='get_overcrowded_airports'),
+    path('get_all_users', get_all_users, name='get_all_users'),
 ]
